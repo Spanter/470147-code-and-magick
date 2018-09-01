@@ -185,33 +185,32 @@
 
   /*Скорость файерболла*/
   var fireballSize = 22;
-  var getFireballSpeed = directionFireball(left){
-    var speed = 2;
-    if(left === true){
-      speed = 5;
-    }
-    return left;
-  }
+  var getFireballSpeed = function(left){
+    return left ? 5 : 2;
+  };
 
   /*Пропорциональная высота мага*/
 
 var wizardSpeed = 3;
 var wizardWidth = 70;
 
-var getWizardHeight = proportionWizardHeight(wizardHeight){
-  wizardHeight = 1.337 * wizardWidth;
-  return wizardHeight;
-}
+var getWizardHeight = function(wizardWidth){
+  wizardWidth *= 1.337;
+  return wizardWidth;
+};
 
 /*Ширина и высота игрового поля*/
 
  var getWizardX = function(width){
-
- }
+  width = (width / 2) - (wizardWidth / 2);
+  return width;
+ };
 
  var getWizardY = function(height){
-
- }
+  var wizardHeight = getWizardHeight(wizardWidth);
+  height = (height / 3) - (wizardHeight / 2);
+  return height;
+ };
   
 </script>
 <script src="js/game.js"></script>
