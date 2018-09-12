@@ -57,7 +57,7 @@ window.renderStatistics = function (ctx, names, times) {
   var maxTimes = getMaxElement(times);
   for (var i = 0; i < names.length; i++) {
     ctx.fillStyle = '#000';
-    ctx.fillStyle(names[i], cloudX + (gap + barWidth) * i + gap, cloudY + cloudHeight - fontGap * 2);
+    ctx.fillText(names[i], cloudX + (gap + barWidth) * i + gap, cloudY + cloudHeight - fontGap * 2);
     if (names[i] === 'Вы') {
       ctx.fillStyle = barColor;
     } else {
