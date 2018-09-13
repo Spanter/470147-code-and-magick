@@ -22,6 +22,7 @@ var renderCloud = function (ctx, x, y, color) {
   ctx.fillRect(x, y, cloudWidth, cloudHeight);
 };
 
+
 /* Максимальный элемент */
 
 var getMaxElement = function (arr) {
